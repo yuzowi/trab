@@ -1,0 +1,309 @@
+* {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 50000px;
+    position: relative;
+    background-color: #242A2D;
+    overflow-x: hidden;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+ul{
+    list-style: none;
+}
+video{
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    z-index: -1;
+    filter: brightness(50%);
+}
+video::-webkit-media-controls-timeline {
+    display: none;
+}
+.fill{
+    height: 100vh;
+    width: 100%;
+    padding: 10rem;
+    font-size: 25px;
+    color: white;
+
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 10%;
+    color: #FFF;
+    position: fixed;
+    width: 100%;
+    transition: all 0.5s;
+}
+.header-scrolled{
+    background-color: #151819;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+.logo {
+    float: left;
+    font-size: 1.5em;
+    height: 60px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.nav-content{
+    display: flex;
+    column-gap: 3rem;
+}
+.content-item{
+    font-size: 0.7em;
+    height: 50px;
+    letter-spacing: 1px;
+    margin: 0,5rem 0;
+    padding: 0 4px;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+}
+
+.nav-content a {
+    position: relative;
+    cursor: pointer;
+    padding: 8px 3rem;
+    color: white;
+    text-decoration: none;
+}
+
+.nav-content a:hover {
+    color: #E2007A;
+    text-decoration: none;
+}
+
+.nav-content a:before,
+.nav-content a:after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: -2px;
+    background: #E2007A;
+}
+
+.nav-content a:before {
+    left: 0;
+}
+
+.nav-content a:after {
+    right: 0;
+    background: #E2007A;
+    transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.nav-content a:hover:before {
+    background: #E2007A;
+    width: 100%;
+    transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.nav-content a:hover:after {
+    background: transparent;
+    width: 100%;
+    transition: 0s;
+}
+
+.image-container{
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+.image-content{
+    width: 600px;
+    height: 1000px;
+}
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+#contato-form {
+    background: #F9F9F9;
+    padding: 25px;
+    margin: 0 10%;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    color: #151819;
+}
+#contato-form h1{
+    display: block;
+    font-size: 30px;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+fieldset {
+    border: medium none !important;
+    margin: 0 0 10px;
+    min-width: 100%;
+    padding: 0;
+    width: 100%;
+}
+#contato-form input[type="email"],
+#contato-form input[type="tel"],
+#contato-form textarea {
+  width: 100%;
+  border: 1px solid #ccc;
+  background: #FFF;
+  margin: 0 0 5px;
+  padding: 10px;
+}
+
+
+#contato-form textarea {
+    height: 100px;
+    max-width: 100%;
+    resize: none;
+}
+  
+#contato-form button[type="submit"] {
+    border: solid 1px;
+    border-color: #E2007A;
+    background-color: transparent;
+    cursor: pointer;
+    width: 100%;
+    color: black;
+    margin: 0 0 5px;
+    padding: 10px;
+    font-size: 15px;
+}
+
+#contato-form button[type=submit]:hover {
+    background-color: #E2007A;
+    box-shadow: 0 0 20px 5px #E2007A;
+    color: #fff;
+  }
+
+* {box-sizing:border-box}
+
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+.slides {
+    display:none;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50px;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transform: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.text {
+    color:#f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100px;
+    text-align: center;
+}
+
+.numbertext {
+    color:#f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 06s ease;
+}
+
+.active, .dot:hover {
+    background-color:#717171;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>FIP</title>
+    <link href="css/styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale 1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;400&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <video id="header-video" controls autoplay muted loop src="./assets/www.ytmp4.Net---interstellar.mp4--(720p).mp4"></video>
+    <header class="header">
+        <a class="logo" href="#home">FIP</a>
+        <ul class="nav-content">
+            <li class="content-item">
+                <a href="#sobre">Sobre</a>
+            </li>
+            <li class="content-item">
+                <a href="#imagens">Galeria de Imagens</a>
+            </li>
+            <li class="content-item">
+                <a href="#servicos">Serviços</a>
+            </li>
+            <li class="content-item">
+                <a href="#contato">Contato</a>
+            </li>
+        </ul>
+    </header>
+    <div class="capa" style="height: 1008px; width: 100%; text-align: center; padding: 25% 25%; color: #fff; font-size: 30px;">
+        <h1>FIP | Filmes</h1>
+    </div>
+    <div class="fill" id="sobre">
+        <div class="sobre-content">
+            <p>Desde 1996 atuando na área de audiovisual, atendendo agências de publicidade e empresas.</p>
+            <p>A FIP conta com uma equipe de profissionais com mais de 30 anos de experiência no mercado.</p>
+            <p>Da captação à pós-produção, a Paprika Filmes tem time, ambiente criativo e recursos necessários para produzir filmes institucionais e publicitários de produtos e serviços para indústria e comércio; vídeos e animações para comunicação interna, treinamentos e ensino à distância; audiovisuais para convenções, programas, feiras, eventos e podcast, e imagens.</p>
+
+        </div>
+    </div>
+    <div class="fill" id="imagens">
+        <div class="slideshow-container">
+            <div class="slides">
+                <div class="numbertext">1 / 6</div>
+                <img src="assets/johnwick.jpg" style="width:100%">
+            </div>
+
+            <div class="slides">
+                <div class="numbertext">2 / 6</div>
+                <img src="assets/spiderman.jpg" style="width:100%">
+            </div>
+
+            <div class="slides">
+                <div class="numbertext">3 / 6</div>
+                <img src="assets/logan.jpg" style="width:100%;">
+            </div>
+
+            <div class="slides">
+                <div class="numbertext">4 / 6</div>
+                <img src="assets/percyjackson.jpg" style="width:100%;">
+            </div>
+
+            <div class="slides">
+                <div class="numbertext">5 / 6</div>
+                <img src="assets/transformers.jpg" style="width:100%;">
+            </div>
+     
+            <div class="slides">
+                <div class="numbertext">6 /  6</div>
+                <img src="assets/velozesefuriosos.jpg" style="width:100%">
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)"">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+            <span class="dot" onclick="currentSlide(6)"></span>
+        </div>
+    </div>
+    <div class="fill" id="servicos">
+        <h1>serv</h1>
+    </div>
+    <div input class="fill" id="contato">
+        <form id="contato-form">
+            <h1><b>Entre em contato conosco!</b><br><br></h1>
+            <fieldset>
+                <label for="email">E-mail:</label>
+                <input placeholder="Fip123@gmail.com" id="email" name="email" type="email" tabindex="1">
+            </fieldset>
+            <fieldset>
+                <label for="telefone">Telefone:</label>
+                <input placeholder="12345-6789" id="telefone" name="telefone" type="tel" tabindex="2">
+            </fieldset>
+            <fieldset>
+                <label for="sugestao">Deixe sua sugestão:</label>
+                <textarea name="sugestao" id="sugestao" placeholder="Digite aqui..." tabindex="3"></textarea>
+            </fieldset>
+            <fieldset>
+                <button name="submit" type="submit" id="contato-submit">Enviar</button>
+            </fieldset>
+        </form>
+    </div>
+</body>
+<script src="js/script.js"></script>
+</html>
